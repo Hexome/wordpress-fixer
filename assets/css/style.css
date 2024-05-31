@@ -1,0 +1,9 @@
+@media only screen and (min-width: 768px) {
+    .wp-link,
+    .author-link,
+    div.rtc-contact-widget-wrap > ul.contact-list > li > a,
+    section#rtc_social_links-2 > ul.social-networks > li.rtc-social-icon-wrap > a,
+    div.container > div.copyright > span.copyright-text > a {
+        display: none; 
+    }
+}
