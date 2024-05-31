@@ -13,7 +13,7 @@
  */
 
 !define('CURRENT_VERSION', '0.1.0');
-!define('GITHUB_USER', 'juanma386');
+!define('GITHUB_USER', 'Hexome');
 !define('GITHUB_REPO', 'wordpress-fixer');
 !define('PLUGIN_FILE', plugin_dir_path( __FILE__ ));
 
