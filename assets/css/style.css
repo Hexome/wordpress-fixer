@@ -1,5 +1,6 @@
-/** Version:         0.0.4 **/
+/** Version:         0.0.5 **/
 @media only screen and (min-width: 768px) {
+    .comment-box,
     .tags,
     .tooltip-target,
     .nav-previous .nav-holder, 
