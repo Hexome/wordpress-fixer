@@ -7,12 +7,12 @@
  * Author URI:      https://hexome.cloud
  * Text Domain:     wordpress-fixer
  * Domain Path:     /languages
- * Version:         0.0.1
+ * Version:         0.0.2
  *
  * @package         Hexome_Fixer
  */
 
-!define('CURRENT_VERSION', '0.1.0');
+!define('CURRENT_VERSION', '0.0.2');
 !define('GITHUB_USER', 'Hexome');
 !define('GITHUB_REPO', 'wordpress-fixer');
 !define('PLUGIN_FILE', plugin_dir_path( __FILE__ ));
