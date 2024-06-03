@@ -1,4 +1,7 @@
+/** Version:         0.0.2 **/
 @media only screen and (min-width: 768px) {
+    .job_listings,
+    .content,    
     .wp-link,
     .author-link,
     div.rtc-contact-widget-wrap > ul.contact-list > li > a,
