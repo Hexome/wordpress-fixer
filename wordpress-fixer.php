@@ -7,15 +7,15 @@
  * Author URI:      https://hexome.cloud
  * Text Domain:     wordpress-fixer
  * Domain Path:     /languages
- * Version:         0.0.8
+ * Version:         0.0.9
  *
  * @package         Hexome_Fixer
  */
 
-!define('CURRENT_VERSION', '0.0.8');
-!define('GITHUB_USER', 'Hexome');
-!define('GITHUB_REPO', 'wordpress-fixer');
-!define('PLUGIN_FILE', plugin_dir_path( __FILE__ ));
+!define('WPFIXER_CURRENT_VERSION', '0.0.9');
+!define('WPFIXER_GITHUB_USER', 'Hexome');
+!define('WPFIXER_GITHUB_REPO', 'wordpress-fixer');
+!define('WPFIXER_PLUGIN_FILE', plugin_dir_path( __FILE__ ));
 
 
 function include_abstract_update_plugin_class() {
@@ -44,7 +44,7 @@ function check_for_update_and_execute_action() {
         if ($update_available) {
             add_action( 'admin_notices', 'display_update_notice' );
 
-            new Hexome_Fixer_Updater(CURRENT_VERSION, GITHUB_USER, GITHUB_REPO, PLUGIN_FILE);
+            new Hexome_Fixer_Updater(WPFIXER_CURRENT_VERSION, WPFIXER_GITHUB_USER, WPFIXER_GITHUB_REPO, WPFIXER_PLUGIN_FILE);
         }
 
     }
