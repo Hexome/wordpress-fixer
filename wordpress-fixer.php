@@ -29,6 +29,14 @@ function include_update_plugin_class() {
 add_action( 'plugins_loaded', 'include_update_plugin_class' );
 
 
+function include_structure_data_plugin_class() {
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-structure-data-plugin.php';
+    new Structure_Data_Plugin();
+}
+add_action( 'plugins_loaded', 'include_structure_data_plugin_class' );
+
+
+
 function check_for_update_and_execute_action() {
     if (isset($_GET['check_for_update'])) {
         $update_available = true; // Placeholder for demonstration, replace with actual logic to check for update
