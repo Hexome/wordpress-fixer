@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) exit;
 class Structure_Data_Plugin {
 
     public function __construct() {
-        add_filter('wpseo_json_ld_output', [$this, 'modify_structured_data']);
+        add_filter('wpseo_json_ld_output', [$this, 'alr_structured_data']);
     }
 
     public function alr_structured_data($data) {
