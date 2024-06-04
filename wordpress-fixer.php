@@ -7,7 +7,7 @@
  * Author URI:      https://hexome.cloud
  * Text Domain:     wordpress-fixer
  * Domain Path:     /languages
- * Version:         0.0.2
+ * Version:         0.0.6
  *
  * @package         Hexome_Fixer
  */
@@ -55,7 +55,7 @@ function display_update_notice() {
 
 function load_custom_script_on_front_end() {
     if (!is_admin()) {
-        wp_enqueue_script('custom-script', plugin_dir_url(__FILE__) .  '/assets/js/script.js', array('jquery'), '0.1.0', true);
+        wp_enqueue_script('custom-script', plugin_dir_url(__FILE__) .  '/assets/js/script.js', array('jquery'), '0.0.6', true);
     }
 }
 
