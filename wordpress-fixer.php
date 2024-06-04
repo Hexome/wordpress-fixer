@@ -12,7 +12,7 @@
  * @package         Hexome_Fixer
  */
 
-!define('CURRENT_VERSION', '0.0.7');
+!define('CURRENT_VERSION', '0.0.8');
 !define('GITHUB_USER', 'Hexome');
 !define('GITHUB_REPO', 'wordpress-fixer');
 !define('PLUGIN_FILE', plugin_dir_path( __FILE__ ));
