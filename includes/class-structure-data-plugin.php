@@ -21,14 +21,11 @@ class Structure_Data_Plugin {
     }
 
     public function alr_structured_data($data) {
-        // Verificar si el tipo es "JobPosting"
         if (isset($data['@type']) && $data['@type'] === 'JobPosting') {
-            // Verificar si el campo "applicantLocationRequirements" no existe
             if (!isset($data['applicantLocationRequirements'])) {
-                // Agregar el campo "applicantLocationRequirements"
                 $data['applicantLocationRequirements'] = [
                     '@type' => 'Country',
-                    'name' => 'US' // Aquí puedes ajustar el valor según tus necesidades
+                    'name' => 'US' 
                 ];
             }
         }
