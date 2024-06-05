@@ -12,7 +12,7 @@ class StyleController {
             });
         }, this.waitTime);
     }
-    addRecognizableNamesToLinks: function() {
+    addRecognizableNamesToLinks() {
                 const logoLinks = document.querySelectorAll('.custom-logo-link');
                 
                 logoLinks.forEach(link => {
@@ -48,7 +48,7 @@ class StyleController {
                     link.setAttribute('aria-label', `Enlace a: ${linkText}`);
                 });
             }
-	loadingStyle:function(){
+	loadingStyle(){
 		document.querySelector("#masthead > div.header-main > div > div.menu-wrap > div > a").style.background = "#FFF";
 	}
 }
