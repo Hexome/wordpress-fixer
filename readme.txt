@@ -5,7 +5,7 @@ Tags: fixer, repair
 Requires at least: 4.5
 Tested up to: 6.5.3
 Requires PHP: 5.6
-Stable tag: 0.0.14
+Stable tag: 0.0.15
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,10 @@ Currently, there are no customization options available for Hexome Red Fixer. Ho
 2. This is the second screen shot
 
 == Changelog ==
+
+= 0.0.15 =
+Issue CSS minor correction
+
 = 0.0.12 =
 Issue Javascript news
 
@@ -60,7 +64,7 @@ Issue news
 
 == Upgrade Notice ==
 
-= 0.0.14 =
+= 0.0.15 =
 Issue CSS minor correction
 
 == Arbitrary section ==
