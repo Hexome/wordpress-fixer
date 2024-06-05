@@ -2,7 +2,7 @@ class StyleController {
     constructor(selector, waitTime) {
         this.selector = selector;
         this.waitTime = waitTime;
-    },
+    }
 
     changeStyles() {
         setTimeout(() => {
@@ -12,7 +12,7 @@ class StyleController {
             });
 	setTimeout(() => { this.loadingStyle(); }, this.waitTime);
         }, this.waitTime);
-    },
+    }
     addRecognizableNamesToLinks() {
                 const logoLinks = document.querySelectorAll('.custom-logo-link');
                 
@@ -48,7 +48,7 @@ class StyleController {
                     link.setAttribute('title', `Enlace a: ${linkText}`);
                     link.setAttribute('aria-label', `Enlace a: ${linkText}`);
                 });
-    },
+    }
 	loadingStyle(){
 		document.querySelector("#masthead > div.header-main > div > div.menu-wrap > div > a").style.background = "#FFF";
 		setTimeout(() => { this.addRecognizableNamesToLinks(); }, this.waitTime);
