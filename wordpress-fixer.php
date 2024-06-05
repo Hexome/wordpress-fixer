@@ -7,7 +7,7 @@
  * Author URI:      https://hexome.cloud
  * Text Domain:     wordpress-fixer
  * Domain Path:     /languages
- * Version:         0.0.9
+ * Version:         0.0.10
  *
  * @package         Hexome_Fixer
  */
