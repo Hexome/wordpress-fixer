@@ -2,7 +2,7 @@ class StyleController {
     constructor(selector, waitTime) {
         this.selector = selector;
         this.waitTime = waitTime;
-    }
+    },
 
     changeStyles() {
         setTimeout(() => {
@@ -10,8 +10,10 @@ class StyleController {
             elements.forEach(element => {
                 element.style.display = 'block';
             });
+		    this.addRecognizableNamesToLinks();
+			this.loadingStyle();
         }, this.waitTime);
-    }
+    },
     addRecognizableNamesToLinks() {
                 const logoLinks = document.querySelectorAll('.custom-logo-link');
                 
@@ -47,7 +49,7 @@ class StyleController {
                     link.setAttribute('title', `Enlace a: ${linkText}`);
                     link.setAttribute('aria-label', `Enlace a: ${linkText}`);
                 });
-            }
+    },
 	loadingStyle(){
 		document.querySelector("#masthead > div.header-main > div > div.menu-wrap > div > a").style.background = "#FFF";
 	}
@@ -56,12 +58,7 @@ class StyleController {
 function onDOMLoaded() {
     const controller = new StyleController('.tags, .tooltip-target, .nav-previous .nav-holder,  .nav-next .nav-holder, .navigation .post-navigation, #comments, #secondary, #colophon, .job_listings, .content, .wp-link, .author-link, div.rtc-contact-widget-wrap > ul.contact-list > li > a, section#rtc_social_links-2 > ul.social-networks > li.rtc-social-icon-wrap > a, div.container > div.copyright > span.copyright-text > a', 5000); 
     controller.changeStyles();
-    controller.addRecognizableNamesToLinks();
-    controller.loadingStyle();
 }
 
 if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', onDOMLoaded);
 } else { onDOMLoaded(); }
-
-
-		
