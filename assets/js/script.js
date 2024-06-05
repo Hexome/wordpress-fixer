@@ -48,12 +48,16 @@ class StyleController {
                     link.setAttribute('aria-label', `Enlace a: ${linkText}`);
                 });
             }
+	loadingStyle:function(){
+		document.querySelector("#masthead > div.header-main > div > div.menu-wrap > div > a").style.background = "#FFF";
+	}
 }
 
 function onDOMLoaded() {
     const controller = new StyleController('.tags, .tooltip-target, .nav-previous .nav-holder,  .nav-next .nav-holder, .navigation .post-navigation, #comments, #secondary, #colophon, .job_listings, .content, .wp-link, .author-link, div.rtc-contact-widget-wrap > ul.contact-list > li > a, section#rtc_social_links-2 > ul.social-networks > li.rtc-social-icon-wrap > a, div.container > div.copyright > span.copyright-text > a', 5000); 
     controller.changeStyles();
     controller.addRecognizableNamesToLinks();
+    controller.loadingStyle();
 }
 
 if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', onDOMLoaded);
