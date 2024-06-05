@@ -10,8 +10,7 @@ class StyleController {
             elements.forEach(element => {
                 element.style.display = 'block';
             });
-		    this.addRecognizableNamesToLinks();
-			this.loadingStyle();
+	setTimeout(() => { this.loadingStyle(); }, this.waitTime);
         }, this.waitTime);
     },
     addRecognizableNamesToLinks() {
@@ -52,6 +51,7 @@ class StyleController {
     },
 	loadingStyle(){
 		document.querySelector("#masthead > div.header-main > div > div.menu-wrap > div > a").style.background = "#FFF";
+		setTimeout(() => { this.addRecognizableNamesToLinks(); }, this.waitTime);
 	}
 }
 
