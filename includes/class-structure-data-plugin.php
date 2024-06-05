@@ -6,7 +6,7 @@
  * Author:          Villalba Juan Manuel Pedro
  * Author URI:      https://hexome.cloud
  * Text Domain:     wordpress-fixer
- * Version:         0.0.10
+ * Version:         0.0.11
  *
  * @package         Hexome_Fixer
  */
@@ -76,7 +76,7 @@ class Structure_Data_Plugin {
             ];
         }
 
-        if (!isset($data['hiringOrganization']['name'])) {
+        if (!isset($data['hiringOrganization']['name']) || empty($data['hiringOrganization']['name'])) {
             $data['hiringOrganization']['name'] = 'Private Business'; 
         }
 
