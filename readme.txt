@@ -5,7 +5,7 @@ Tags: fixer, repair
 Requires at least: 4.5
 Tested up to: 6.5.3
 Requires PHP: 5.6
-Stable tag: 0.0.11
+Stable tag: 0.0.12
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,9 @@ Currently, there are no customization options available for Hexome Red Fixer. Ho
 = 0.0.11 =
 Issue Structure Data hiringOrganization error of wp-job-manager
 
+= 0.0.10 =
+Issue Structure Data hiringOrganization error of wp-job-manager
+
 = 0.0.9 =
 Issue Structure Data
 
@@ -54,9 +57,8 @@ Issue news
 * Initial release of Hexome Red Fixer.
 
 == Upgrade Notice ==
-
-= 0.0.10 =
-Issue Structure Data hiringOrganization error of wp-job-manager
+= 0.0.12 =
+Issue Javascript news
 
 == Arbitrary section ==
 
