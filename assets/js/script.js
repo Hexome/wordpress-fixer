@@ -51,6 +51,7 @@ class StyleController {
     }
 	loadingStyle(){
 		document.querySelector("#masthead > div.header-main > div > div.menu-wrap > div > a").style.background = "#FFF";
+		document.querySelector("#masthead > div.header-main > div > div.menu-wrap > div > a").style.color = "#03260e";
 		setTimeout(() => { this.addRecognizableNamesToLinks(); }, this.waitTime);
 	}
 }
