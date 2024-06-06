@@ -1,7 +1,11 @@
 /** Version:         0.0.5 **/
+
+   .btn,
+   .meta-nav  {
+       display: none; 
+   }
+
 @media only screen and (min-width: 768px) {
-    .btn,
-    .meta-nav,
     .comment-box,
     .tags,
     .tooltip-target,
