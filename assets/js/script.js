@@ -3,6 +3,7 @@ class SetterAdjuster {
         this.targetContrast = targetContrast;
         this.adjustJobTypeColors();
         this.ensureLinkAccessibility();
+	this.adjustButtonColors();
     }
 
     calculateContrast(color1, color2) {
@@ -53,6 +54,18 @@ class SetterAdjuster {
         links.forEach(link => {
             if (!link.textContent.trim()) {
                 link.textContent = 'Inicio'; 
+            }
+        });
+    }
+    adjustButtonColors() {
+        const buttonElements = document.querySelectorAll('a.btn');
+        buttonElements.forEach(element => {
+            const computedStyles = getComputedStyle(element);
+            const backgroundColor = computedStyles.backgroundColor;
+            const color = computedStyles.color;
+            if (backgroundColor && color) {
+                const adjustedColor = this.adjustColor(backgroundColor, color, this.targetContrast);
+                element.style.color = adjustedColor;
             }
         });
     }
