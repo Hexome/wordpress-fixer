@@ -1,3 +1,57 @@
+class ColorContrastAdjuster {
+    constructor(targetContrast) {
+        this.targetContrast = targetContrast;
+        this.adjustJobTypeColors();
+    }
+
+    calculateContrast(color1, color2) {
+        
+        function luminance(hexColor) {
+            const rgb = parseInt(hexColor.slice(1), 16);
+            const r = (rgb >> 16) & 0xff; 
+            const g = (rgb >> 8) & 0xff;  
+            const b = (rgb >> 0) & 0xff;  
+            const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b; 
+            return luminance / 255; 
+        }
+
+        const lum1 = luminance(color1);
+        const lum2 = luminance(color2);
+
+        const contrast = (Math.max(lum1, lum2) + 0.05) / (Math.min(lum1, lum2) + 0.05);
+
+        return contrast;
+    }
+
+    adjustColor(background, foreground, targetContrast) {
+        const currentContrast = this.calculateContrast(background, foreground);
+
+        if (currentContrast < targetContrast) {
+            const adjustedForeground = '#03260e'; 
+
+            return adjustedForeground;
+        }
+
+        return foreground;
+    }
+
+    adjustJobTypeColors() {
+        const jobTypeElements = document.querySelectorAll('.job-type');
+        jobTypeElements.forEach(element => {
+            const computedStyles = getComputedStyle(element);
+            const backgroundColor = computedStyles.backgroundColor;
+            const color = computedStyles.color;
+            if (backgroundColor && color) {
+                const adjustedColor = this.adjustColor(backgroundColor, color, this.targetContrast);
+                element.style.color = adjustedColor;
+            }
+        });
+    }
+}
+
+
+
+
 class StyleController {
     constructor(selector, waitTime) {
         this.selector = selector;
@@ -52,7 +106,7 @@ class StyleController {
 	loadingStyle(){
 		document.querySelector("#masthead > div.header-main > div > div.menu-wrap > div > a").style.background = "#FFF";
 		document.querySelector("#masthead > div.header-main > div > div.menu-wrap > div > a").style.color = "#03260e";
-		setTimeout(() => { this.addRecognizableNamesToLinks(); }, this.waitTime);
+		setTimeout(() => { this.addRecognizableNamesToLinks(); new ColorContrastAdjuster(4.5); }, this.waitTime);
 	}
 }
 
