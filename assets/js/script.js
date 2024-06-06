@@ -68,7 +68,7 @@ class SetterAdjuster {
     }
     removeSpecifiedElements() {
         const selectors = [
-            'div.site-branding > div.site-title-wrap > p.site-title > a[rel="home"][itemprop="url"]'
+            '.site-title-wrap'
         ];
 
         selectors.forEach(selector => {
