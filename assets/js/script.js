@@ -1,3 +1,20 @@
+ class CssUpdater {
+            constructor() {
+                this.applyImportantStyles();
+            }
+
+            applyImportantStyles() {
+                const elements = document.querySelectorAll('.post-navigation .nav-links .meta-nav');
+
+                elements.forEach(element => {
+                    element.style.setProperty('color', '#03260e', 'important');
+                    element.style.setProperty('background-color', '#2ace5e', 'important');
+                });
+            }
+        }
+
+new CssUpdater();
+
 class AccessibilityAdjuster {
     constructor() {
         this.addAriaLabelToToggleButton();
