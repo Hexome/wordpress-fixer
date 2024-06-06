@@ -109,7 +109,8 @@ class StyleController {
     }
     addRecognizableNamesToLinks() {
                 const logoLinks = document.querySelectorAll('.custom-logo-link');
-                
+
+	    	if (null!=logoLinks)
                 logoLinks.forEach(link => {
                     const imageUrl = link.href;
                     
