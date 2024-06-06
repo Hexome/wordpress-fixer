@@ -1,8 +1,18 @@
 class AccessibilityAdjuster {
     constructor() {
         this.addAriaLabelToToggleButton();
+	this.removeSpecifiedElements();
     }
+    removeSpecifiedElements() {
+        const selectors = [
+            '.site-title-wrap'
+        ];
 
+        selectors.forEach(selector => {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(element => element.remove());
+        });
+    }
     addAriaLabelToToggleButton() {
         const toggleButtons = document.querySelectorAll('button.toggle-btn');
         toggleButtons.forEach(button => {
@@ -19,7 +29,7 @@ class SetterAdjuster {
     constructor(targetContrast) {
         this.targetContrast = targetContrast;
         this.adjustJobTypeColors();
-        this.removeSpecifiedElements();
+
 	this.adjustButtonColors();
     }
 
@@ -66,16 +76,7 @@ class SetterAdjuster {
             }
         });
     }
-    removeSpecifiedElements() {
-        const selectors = [
-            '.site-title-wrap'
-        ];
-
-        selectors.forEach(selector => {
-            const elements = document.querySelectorAll(selector);
-            elements.forEach(element => element.remove());
-        });
-    }
+    
     adjustButtonColors() {
         const buttonElements = document.querySelectorAll('a.btn');
         buttonElements.forEach(element => {
