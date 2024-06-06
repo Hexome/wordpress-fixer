@@ -91,7 +91,7 @@ class SetterAdjuster {
         });
     }
 }
-new SetterAdjuster(4.5);
+new SetterAdjuster(8.5);
 
 class StyleController {
     constructor(selector, waitTime) {
