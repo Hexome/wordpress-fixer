@@ -2,7 +2,7 @@
 
    .btn,
    .meta-nav,
-   span .meta-nav {
+   #masthead > div.header-main > div > div.menu-wrap > div > a {
        display: none; 
    }
 
