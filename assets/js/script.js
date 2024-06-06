@@ -1,3 +1,20 @@
+class AccessibilityAdjuster {
+    constructor() {
+        this.addAriaLabelToToggleButton();
+    }
+
+    addAriaLabelToToggleButton() {
+        const toggleButtons = document.querySelectorAll('button.toggle-btn');
+        toggleButtons.forEach(button => {
+            if (!button.hasAttribute('aria-label')) {
+                button.setAttribute('aria-label', 'Abrir menú de navegación');
+            }
+        });
+    }
+}
+
+new AccessibilityAdjuster();
+
 class SetterAdjuster {
     constructor(targetContrast) {
         this.targetContrast = targetContrast;
