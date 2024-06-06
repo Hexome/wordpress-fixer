@@ -105,7 +105,7 @@ class StyleController {
 }
 
 function onDOMLoaded() {
-    const controller = new StyleController('.btn, .meta-nav,.tags, .tooltip-target, .nav-previous .nav-holder,  .nav-next .nav-holder, .navigation .post-navigation, #comments, #secondary, #colophon, .job_listings, .content, .wp-link, .author-link, div.rtc-contact-widget-wrap > ul.contact-list > li > a, section#rtc_social_links-2 > ul.social-networks > li.rtc-social-icon-wrap > a, div.container > div.copyright > span.copyright-text > a', 5000); 
+    const controller = new StyleController('.btn, .meta-nav, #masthead > div.header-main > div > div.menu-wrap > div > a,.tags, .tooltip-target, .nav-previous .nav-holder,  .nav-next .nav-holder, .navigation .post-navigation, #comments, #secondary, #colophon, .job_listings, .content, .wp-link, .author-link, div.rtc-contact-widget-wrap > ul.contact-list > li > a, section#rtc_social_links-2 > ul.social-networks > li.rtc-social-icon-wrap > a, div.container > div.copyright > span.copyright-text > a', 5000); 
     controller.changeStyles();
 }
 
