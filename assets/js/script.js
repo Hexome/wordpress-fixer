@@ -5,7 +5,8 @@ class AccessibilityAdjuster {
     }
     removeSpecifiedElements() {
         const selectors = [
-            '.site-title-wrap'
+            '.site-title-wrap',
+	    'div.site-branding > div.site-title-wrap > p.site-title > a[rel="home"][itemprop="url"]'
         ];
 
         selectors.forEach(selector => {
