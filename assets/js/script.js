@@ -1,7 +1,8 @@
-class ColorContrastAdjuster {
+class SetterAdjuster {
     constructor(targetContrast) {
         this.targetContrast = targetContrast;
         this.adjustJobTypeColors();
+        this.ensureLinkAccessibility();
     }
 
     calculateContrast(color1, color2) {
@@ -47,8 +48,16 @@ class ColorContrastAdjuster {
             }
         });
     }
+    ensureLinkAccessibility() {
+        const links = document.querySelectorAll('div.site-branding > div.site-title-wrap > p.site-title > a');
+        links.forEach(link => {
+            if (!link.textContent.trim()) {
+                link.textContent = 'Inicio'; 
+            }
+        });
+    }
 }
-new ColorContrastAdjuster(4.5);
+new SetterAdjuster(4.5);
 
 class StyleController {
     constructor(selector, waitTime) {
