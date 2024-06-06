@@ -96,9 +96,6 @@ class StyleController {
                     const imageUrl = link.href;
                     
                     const imageName = window.document.location.hostname;
-                    const textNode = document.createTextNode(imageName);
-                    
-                    link.appendChild(textNode);
                     
                     link.setAttribute('title', `Enlace al logo: ${imageName}`);
                     link.setAttribute('aria-label', `Enlace al logo: ${imageName}`);
