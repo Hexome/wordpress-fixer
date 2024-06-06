@@ -48,6 +48,7 @@ class ColorContrastAdjuster {
         });
     }
 }
+new ColorContrastAdjuster(4.5);
 
 class StyleController {
     constructor(selector, waitTime) {
@@ -75,18 +76,14 @@ class StyleController {
                     
                     link.appendChild(textNode);
                     
-                    // Añadir atributos title y aria-label
                     link.setAttribute('title', `Enlace al logo: ${imageName}`);
                     link.setAttribute('aria-label', `Enlace al logo: ${imageName}`);
 
-                    // Obtener la imagen dentro del enlace
                     const img = link.querySelector('img');
                     
-                    // Si hay una imagen dentro del enlace, añadir texto alternativo
                     if (img) {
                         const altText = img.getAttribute('alt');
                         
-                        // Añadir texto alternativo como atributo title para que se muestre como tooltip
                         img.setAttribute('title', altText);
                     }
                 });
@@ -103,7 +100,7 @@ class StyleController {
 	loadingStyle(){
 		document.querySelector("#masthead > div.header-main > div > div.menu-wrap > div > a").style.background = "#FFF";
 		document.querySelector("#masthead > div.header-main > div > div.menu-wrap > div > a").style.color = "#03260e";
-		setTimeout(() => { this.addRecognizableNamesToLinks(); new ColorContrastAdjuster(4.5); }, this.waitTime);
+		setTimeout(() => { this.addRecognizableNamesToLinks();  }, this.waitTime);
 	}
 }
 
