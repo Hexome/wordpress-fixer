@@ -2,7 +2,7 @@ class SetterAdjuster {
     constructor(targetContrast) {
         this.targetContrast = targetContrast;
         this.adjustJobTypeColors();
-        this.ensureLinkAccessibility();
+        this.removeSpecifiedElements();
 	this.adjustButtonColors();
     }
 
@@ -49,12 +49,14 @@ class SetterAdjuster {
             }
         });
     }
-    ensureLinkAccessibility() {
-        const links = document.querySelectorAll('div.site-branding > div.site-title-wrap > p.site-title > a');
-        links.forEach(link => {
-            if (!link.textContent.trim()) {
-                link.textContent = 'Inicio'; 
-            }
+    removeSpecifiedElements() {
+        const selectors = [
+            'div.site-branding > div.site-title-wrap > p.site-title > a[rel="home"][itemprop="url"]'
+        ];
+
+        selectors.forEach(selector => {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(element => element.remove());
         });
     }
     adjustButtonColors() {
